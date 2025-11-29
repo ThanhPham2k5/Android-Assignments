@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:2:1-29:12
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\Thành\.gradle\caches\8.13\transforms\bde89b41eb009ec239022bc4694d805b\transformed\material-1.13.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\Thành\.gradle\caches\8.13\transforms\c6488655cccd861eb5621874cddf8eee\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\Thành\.gradle\caches\8.13\transforms\ee381055efb4114dd07328c08dd0ba9d\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:2:1-7:12
@@ -44,22 +44,22 @@ MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Thành\.gradle\cach
 MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\Thành\.gradle\caches\8.13\transforms\260880c1be3cdb7f96ac80265b59d3f6\transformed\core-viewtree-1.0.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Thành\.gradle\caches\8.13\transforms\ff6414731e2957f8fddeef41f8f743fd\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:2:1-7:12
 	package
-		INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.CAMERA
-ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:5:5-65
+ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:5:5-65
 	android:name
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:5:22-62
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:5:22-62
 application
-ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:6:5-27:19
-INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:6:5-27:19
+ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:6:5-27:19
+INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:6:5-27:19
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\Thành\.gradle\caches\8.13\transforms\bde89b41eb009ec239022bc4694d805b\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\Thành\.gradle\caches\8.13\transforms\bde89b41eb009ec239022bc4694d805b\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\Thành\.gradle\caches\8.13\transforms\c6488655cccd861eb5621874cddf8eee\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
@@ -77,51 +77,51 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Thành\.gradle\cac
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Thành\.gradle\caches\8.13\transforms\f82167c09e6ae91837d5b49ea1000efe\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Thành\.gradle\caches\8.13\transforms\f82167c09e6ae91837d5b49ea1000efe\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:extractNativeLibs
-		INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] C:\Users\Thành\.gradle\caches\8.13\transforms\e14d9122d45fb71ea63e5eedb2149f5e\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:11:9-41
 	android:fullBackupContent
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:9:9-54
 	android:roundIcon
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:7:9-35
 	android:theme
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:14:9-49
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:14:9-49
 	android:dataExtractionRules
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:8:9-65
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:8:9-65
 activity#com.example.baitapnhom1.EditActivity
-ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:15:9-17:40
+ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:15:9-17:40
 	android:exported
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:17:13-37
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:17:13-37
 	android:name
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:16:13-41
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:16:13-41
 activity#com.example.baitapnhom1.MainActivity
-ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:18:9-26:20
+ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:18:9-26:20
 	android:exported
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:20:13-36
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:20:13-36
 	android:name
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:19:13-41
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:19:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml:24:27-74
 uses-sdk
-INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml
-INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml
+INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml
+INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\Thành\.gradle\caches\8.13\transforms\bde89b41eb009ec239022bc4694d805b\transformed\material-1.13.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\Thành\.gradle\caches\8.13\transforms\bde89b41eb009ec239022bc4694d805b\transformed\material-1.13.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\Thành\.gradle\caches\8.13\transforms\c6488655cccd861eb5621874cddf8eee\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
@@ -201,9 +201,9 @@ MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\Thành\.gradle\caches\8
 MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Thành\.gradle\caches\8.13\transforms\ff6414731e2957f8fddeef41f8f743fd\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Thành\.gradle\caches\8.13\transforms\ff6414731e2957f8fddeef41f8f743fd\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
-		INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\Thanhdidong\Baitapnhom1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\clonegit\Android-Assignments\Bai01\app\src\main\AndroidManifest.xml
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Thành\.gradle\caches\8.13\transforms\f70f12d124aec4360c28a3dac21f47ef\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Thành\.gradle\caches\8.13\transforms\a73eae44318146a0fe01029875dc3f6e\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20

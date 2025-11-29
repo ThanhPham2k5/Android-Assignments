@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="purple_500">#6200EE</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="app_name">Baitapnhom1</string>
+    <string name="app_name">FaceApp</string>
     <style name="Base.Theme.Baitapnhom1" parent="Theme.Material3.DayNight.NoActionBar">
         
         

@@ -1,9 +1,9 @@
 package com.example.baitapnhom1;
 
 import android.Manifest;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -23,31 +23,9 @@ public class EditActivity extends AppCompatActivity {
     private ImageView imgEditAvatar;
     private EditText etName, etEmail;
     private Button btnSelectImage, btnSave, btnTakePhoto;
-    private Uri imageUri; //Lưu URI ảnh thư viện hoặc camera (nếu lưu file)
 
-    //Xin quyền camera
-    private final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
-            new ActivityResultContracts.RequestPermission(),
-            isGranted -> {
-                if (isGranted) {
-                    openCamera();
-                } else {
-                    Toast.makeText(this, "Bạn cần cấp quyền Camera", Toast.LENGTH_SHORT).show();
-                }
-            }
-    );
-
-    // Mở camera
-    private final ActivityResultLauncher<Intent> cameraLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            result -> {
-                if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                    Bitmap photo = (Bitmap) result.getData().getExtras().get("data");
-                    imgEditAvatar.setImageBitmap(photo);
-                    imageUri = null; // ảnh camera tạm thời, không có URI
-                }
-            }
-    );
+    private Uri imageUri;        // lưu ảnh từ thư viện hoặc camera
+    private Uri cameraImageUri;  // URI ảnh chụp thật (file lưu vào MediaStore)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +39,7 @@ public class EditActivity extends AppCompatActivity {
         btnSave = findViewById(R.id.btnSave);
         btnTakePhoto = findViewById(R.id.btnTakePhoto);
 
-        //LẤY DỮ LIỆU CŨ TỪ INTENT
+        // Nhận dữ liệu cũ
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String email = intent.getStringExtra("email");
@@ -69,71 +47,107 @@ public class EditActivity extends AppCompatActivity {
 
         if (name != null) etName.setText(name);
         if (email != null) etEmail.setText(email);
+
         if (imageUriStr != null && !imageUriStr.isEmpty()) {
             imageUri = Uri.parse(imageUriStr);
-            try {
-                getContentResolver().openInputStream(imageUri); // kiểm tra quyền
-                imgEditAvatar.setImageURI(imageUri);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            imgEditAvatar.setImageURI(imageUri);
         }
 
-        //Chọn ảnh từ thư viện
+        // Chọn ảnh thư viện
         btnSelectImage.setOnClickListener(v -> openGallery());
 
-        //Chụp ảnh
+        // Chụp ảnh
         btnTakePhoto.setOnClickListener(v -> {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                     == PackageManager.PERMISSION_GRANTED) {
                 openCamera();
             } else {
-                requestPermissionLauncher.launch(Manifest.permission.CAMERA);
+                permissionLauncher.launch(Manifest.permission.CAMERA);
             }
         });
 
-        //Lưu dữ liệu
+        // Lưu dữ liệu
         btnSave.setOnClickListener(v -> {
             Intent result = new Intent();
             result.putExtra("name", etName.getText().toString().trim());
             result.putExtra("email", etEmail.getText().toString().trim());
-            if (imageUri != null) result.putExtra("imageUri", imageUri.toString());
+
+            if (imageUri != null)
+                result.putExtra("imageUri", imageUri.toString());
+
             setResult(RESULT_OK, result);
             finish();
         });
     }
 
-    //Mở thư viện ảnh
-    private void openGallery() {
-        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("image/*");
-        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        intent.addFlags(Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION);
-        startActivityForResult(intent, 101);
+    // ============================
+    // QUYỀN CAMERA
+    // ============================
+    private final ActivityResultLauncher<String> permissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {
+                if (granted) openCamera();
+                else Toast.makeText(this, "Bạn cần cấp quyền Camera", Toast.LENGTH_SHORT).show();
+            });
+
+    // ============================
+    // CAMERA
+    // ============================
+    private Uri createImageUri() {
+        ContentValues values = new ContentValues();
+        values.put(MediaStore.Images.Media.TITLE, "captured_image");
+        values.put(MediaStore.Images.Media.DESCRIPTION, "Image taken from camera");
+        return getContentResolver()
+                .insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
     }
 
     private void openCamera() {
+        cameraImageUri = createImageUri();
+
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, cameraImageUri);
+
         cameraLauncher.launch(intent);
+    }
+
+    private final ActivityResultLauncher<Intent> cameraLauncher =
+            registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+                if (result.getResultCode() == RESULT_OK) {
+                    imageUri = cameraImageUri; // lưu URI thật
+                    imgEditAvatar.setImageURI(imageUri);
+                }
+            });
+
+    // ============================
+    // GALLERY
+    // ============================
+    private void openGallery() {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        intent.setType("image/*");
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        intent.addFlags(Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION);
+
+        startActivityForResult(intent, 101);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        // Xử lý ảnh từ thư viện
-        if (resultCode == RESULT_OK && requestCode == 101 && data != null) {
+        // Chọn ảnh thư viện
+        if (requestCode == 101 && resultCode == RESULT_OK && data != null) {
+
             imageUri = data.getData();
             imgEditAvatar.setImageURI(imageUri);
 
-            // Giữ quyền truy cập URI vĩnh viễn
-            try {
-                final int takeFlags = data.getFlags() & Intent.FLAG_GRANT_READ_URI_PERMISSION;
-                getContentResolver().takePersistableUriPermission(imageUri, takeFlags);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            // Lưu quyền truy cập
+            final int takeFlags = data.getFlags()
+                    & Intent.FLAG_GRANT_READ_URI_PERMISSION;
+
+            getContentResolver().takePersistableUriPermission(
+                    imageUri, takeFlags
+            );
         }
     }
 }
