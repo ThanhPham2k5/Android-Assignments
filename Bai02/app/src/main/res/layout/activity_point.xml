@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     android:background="#F8F9FA"
     tools:context=".PointActivity">
+
     <View
         android:id="@+id/headerBg"
         android:layout_width="match_parent"
@@ -16,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvLabelInput"
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -35,7 +36,7 @@
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:cardBackgroundColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@+id/tvLabelInput"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -88,6 +89,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/tvLabelInput"
                 android:text="New Points"
                 android:textColor="#757575"
                 android:textStyle="bold"
@@ -161,15 +163,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="0dp"
         android:background="#FFFFFF"
         android:elevation="10dp"
+        android:paddingBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
             android:id="@+id/navInput"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:text="INPUT"
             android:backgroundTint="#FFFFFF"
@@ -181,7 +183,7 @@
         <Button
             android:id="@+id/navUse"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:text="USE"
             android:backgroundTint="#FFFFFF"
@@ -193,7 +195,7 @@
         <Button
             android:id="@+id/navList"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:text="LIST"
             android:backgroundTint="#FFFFFF"
