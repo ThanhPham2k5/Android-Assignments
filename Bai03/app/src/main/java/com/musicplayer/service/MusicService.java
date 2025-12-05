@@ -200,7 +200,7 @@ public class MusicService extends Service {
 
 
         PendingIntent contentIntent = PendingIntent.getActivity(
-                this, 4, new Intent(this, MusicPlayerActivity.class),
+                this, 4, new Intent(this, com.musicplayer.service.MusicPlayerActivity.class),
                 PendingIntent.FLAG_IMMUTABLE);
 
 
