@@ -16,6 +16,7 @@ import android.os.Looper;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
+import com.musicplayer.MusicPlayerActivity;
 import com.musicplayer.R;
 import com.musicplayer.SongModel;
 
@@ -200,7 +201,7 @@ public class MusicService extends Service {
 
 
         PendingIntent contentIntent = PendingIntent.getActivity(
-                this, 4, new Intent(this, com.musicplayer.service.MusicPlayerActivity.class),
+                this, 4, new Intent(this, MusicPlayerActivity.class),
                 PendingIntent.FLAG_IMMUTABLE);
 
 

@@ -1,4 +1,4 @@
-package com.musicplayer.service;
+package com.musicplayer;
 
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
@@ -23,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.musicplayer.R;
 import com.musicplayer.SongModel;
+import com.musicplayer.service.MusicService;
 
 import java.util.ArrayList;
 import java.util.List;
