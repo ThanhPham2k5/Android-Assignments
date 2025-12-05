@@ -102,25 +102,6 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        Intent intent = getIntent();
-        if (intent != null && Intent.ACTION_VIEW.equals(intent.getAction())) {
-            Uri uri = intent.getData();
-            if (uri != null) {
-                String path = uri.toString();
-                // Create a temporary 1-song list
-                SongModel singleSong = new SongModel("Unknown", "Unknown", path, 0);
-                ArrayList<SongModel> tempList = new ArrayList<>();
-                tempList.add(singleSong);
-
-                Intent playerIntent = new Intent(this, MusicPlayerActivity.class);
-                playerIntent.putExtra("songPath", path);
-                playerIntent.putExtra("songIndex", 0);
-                playerIntent.putExtra("songList", tempList);
-                startActivity(playerIntent);
-                return; // skip loading full list
-            }
-        }
-
         loadSongs();
 
     }
