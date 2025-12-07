@@ -83,7 +83,7 @@ public class MusicService extends Service {
         }
         if (intent != null && intent.hasExtra("songPath")) {
 
-            handler.removeCallbacks(updateRunnable);
+//            handler.removeCallbacks(updateRunnable);
             isPlaying = false;
 
             String songPath = intent.getStringExtra("songPath");
