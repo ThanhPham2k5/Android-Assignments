@@ -123,8 +123,11 @@ public class MusicPlayerActivity extends AppCompatActivity {
 
         //get data from Intent
         Intent intent = getIntent();
-        if(intent == null) return;
+        handleIntent(intent);
+    }
 
+    private void handleIntent(Intent intent) {
+        if (intent == null) return;
         String action = intent.getAction();
         Uri uri = intent.getData();
 
@@ -273,5 +276,12 @@ public class MusicPlayerActivity extends AppCompatActivity {
             stopService(new Intent(this, MusicService.class));
         }
 
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        handleIntent(intent);
     }
 }

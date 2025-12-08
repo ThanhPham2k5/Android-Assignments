@@ -169,11 +169,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String copyImageToInternal(Uri uri){
+        if(uri == null) return null;
         try{
             InputStream inputStream = getContentResolver().openInputStream(uri);
+            if(inputStream == null) return null;
 
             File dir = new File(getFilesDir(), "covers");
-            if(!dir.exists()) dir.mkdir();
+            if (!dir.exists() && !dir.mkdirs()) return null;
 
             String filename = System.currentTimeMillis() + ".jpg";
             File file = new File(dir, filename);
@@ -183,9 +185,7 @@ public class MainActivity extends AppCompatActivity {
             byte[] buffer = new byte[1024];
             int length;
 
-            while (true){
-                assert inputStream != null;
-                if (!((length = inputStream.read(buffer)) > 0)) break;
+            while ((length = inputStream.read(buffer)) > 0) {
                 outputStream.write(buffer, 0, length);
             }
 
